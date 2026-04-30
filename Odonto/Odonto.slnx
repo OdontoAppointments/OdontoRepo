@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Odonto.API/Odonto.API.csproj" />
+  <Project Path="Odonto.BL/Odonto.BL.csproj" />
+  <Project Path="Odonto.Domain/Odonto.Domain.csproj" />
+  <Project Path="Odonto.Infra/Odonto.Infra.csproj" />
+</Solution>
