@@ -1,3 +1,5 @@
+using Odonto.Infra.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -6,7 +8,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddInfrastructure();
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
