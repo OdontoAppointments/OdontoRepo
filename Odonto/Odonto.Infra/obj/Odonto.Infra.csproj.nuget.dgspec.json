@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andre\\Desktop\\OdontoRepo\\Odonto\\Odonto.Infra\\Odonto.Infra.csproj": {}
+    "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andre\\Desktop\\OdontoRepo\\Odonto\\Odonto.Infra\\Odonto.Infra.csproj": {
+    "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andre\\Desktop\\OdontoRepo\\Odonto\\Odonto.Infra\\Odonto.Infra.csproj",
-        "projectName": "Odonto.Infra",
-        "projectPath": "C:\\Users\\Andre\\Desktop\\OdontoRepo\\Odonto\\Odonto.Infra\\Odonto.Infra.csproj",
-        "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andre\\Desktop\\OdontoRepo\\Odonto\\Odonto.Infra\\obj\\",
+        "projectUniqueName": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj",
+        "projectName": "Odonto.Domain",
+        "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\VisualStudio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,13 +32,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -65,7 +53,78 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.126/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj",
+        "projectName": "Odonto.Infra",
+        "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj": {
+                "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.126/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -14,4 +14,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Odonto.BL\Odonto.BL.csproj" />
+    <ProjectReference Include="..\Odonto.Domain\Odonto.Domain.csproj" />
+    <ProjectReference Include="..\Odonto.Infra\Odonto.Infra.csproj" />
+  </ItemGroup>
+
 </Project>
