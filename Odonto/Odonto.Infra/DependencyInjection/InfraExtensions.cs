@@ -10,18 +10,12 @@ public static class InfraExtensions
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
-        var connectionString = Environment.GetEnvironmentVariable("PostgreeConnection")
+        var connectionString = Environment.GetEnvironmentVariable("PostgreConnection")
                                ?? throw new ArgumentException("Invalid Connection String!!!");
 
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(connectionString));
         
-        using var scope = services.BuildServiceProvider().CreateScope();
-        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        db.Database.Migrate();
-        
-        // Repositórios aqui
-
         services.AddScoped<IClienteRepository, ClienteRepository>();
 
         return services;

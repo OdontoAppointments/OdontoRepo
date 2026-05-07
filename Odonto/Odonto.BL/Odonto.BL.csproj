@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Odonto.Domain\Odonto.Domain.csproj" />
+    <ProjectReference Include="..\Odonto.Infra\Odonto.Infra.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Odonto.BL.DependencyInjection;
+using Odonto.Infra.Context.Data.Context;
 using Odonto.Infra.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,9 +12,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfrastructure();
+builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

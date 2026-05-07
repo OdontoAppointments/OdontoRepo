@@ -97,7 +97,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj": {
+                "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj"
+              },
+              "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj": {
+                "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -109,6 +116,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

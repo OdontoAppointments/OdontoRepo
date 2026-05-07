@@ -25,6 +25,72 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj": {
+                "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj"
+              },
+              "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj": {
+                "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.126/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj",
+        "projectName": "Odonto.Domain",
+        "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -37,6 +103,77 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.126/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj",
+        "projectName": "Odonto.Infra",
+        "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj": {
+                "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Domain/Odonto.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
