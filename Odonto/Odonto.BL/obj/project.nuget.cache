@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ib146jYYI9gPqCgsHkqqSpNqL07Dc4dQAExBTLcrQvXLkN0ilNF71/i+R/dO3Mf9PZ3V0W24LtKYR8Vhe+HPHA==",
+  "dgSpecHash": "0/Rr8IZ9gRU=",
   "success": true,
   "projectFilePath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.BL/Odonto.BL.csproj",
   "expectedPackageFiles": [
@@ -42,5 +42,15 @@
     "/root/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/root/.nuget/packages/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.BL/Odonto.BL.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.BL/Odonto.BL.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

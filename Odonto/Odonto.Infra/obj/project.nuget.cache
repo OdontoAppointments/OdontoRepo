@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s9Mh8iX7Wz170RLq/DwaKK0jwH4ceqOWkqkQXCdOvFbpfjFStq7Z//GJU4HPULenmT9rxrpHAItJBP3UGCdOGw==",
+  "dgSpecHash": "KFt+MKGN5Eg=",
   "success": true,
   "projectFilePath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj",
   "expectedPackageFiles": [
@@ -21,5 +21,15 @@
     "/root/.nuget/packages/npgsql/8.0.0/npgsql.8.0.0.nupkg.sha512",
     "/root/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.0/npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/ant-nio-pedro/RiderProjects/OdontoRepo/Odonto/Odonto.Infra/Odonto.Infra.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

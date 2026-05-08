@@ -31,6 +31,15 @@ public class ClienteService : IClienteService
  
         return MapearParaResponse(cliente);
     }
+
+    public async Task<ClienteResponse> ObterPorNomeAsync(string nome)
+    {
+        var cliente = await _repository.ObterPorNome(nome)
+            ?? throw new ClienteNaoEncontradoException(nome);
+
+        return MapearParaResponse(cliente);
+    }
+
     public async Task<IEnumerable<ClienteResponse>> ListarAsync()
     {
         var clientes = await _repository.ObterTodos();

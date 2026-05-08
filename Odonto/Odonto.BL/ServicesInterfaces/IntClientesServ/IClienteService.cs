@@ -6,6 +6,7 @@ namespace Odonto.BL.ServicesInterfaces.IntClientesServ;
 public interface IClienteService
 {
     Task<ClienteResponse> ObterPorIdAsync(int id);
+    Task<ClienteResponse> ObterPorNomeAsync(string nome);
     Task<IEnumerable<ClienteResponse>> ListarAsync();
     Task<ClienteResponse> CriarAsync(CriarClienteRequest request);
     Task<ClienteResponse> AtualizarAsync(int id, AtualizarClienteRequest request);

@@ -30,6 +30,13 @@ public class ClientesController : ControllerBase
 
         return Ok(cliente);
     }
+    
+    [HttpGet("{nome}")]
+    public async Task<IActionResult> ObterPorNome(string nome)
+    {
+        var cliente = await _service.ObterPorNomeAsync(nome);
+        return Ok(cliente);
+    }
 
     [HttpPost]
     public async Task<IActionResult> Criar(
