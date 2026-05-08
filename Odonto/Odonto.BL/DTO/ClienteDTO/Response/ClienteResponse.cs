@@ -7,5 +7,5 @@ public record ClienteResponse(
     string Telefone,
     EnderecoResponse Endereco,
     DateOnly DataNascimento,
-    DateTime DataCriacao
+    DateTimeOffset DataCriacao
 );

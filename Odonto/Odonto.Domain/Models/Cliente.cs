@@ -10,7 +10,12 @@ public class Cliente
     public string Telefone { get; set; }
     public Endereco Endereco { get; set; }
     public DateOnly DataNascimento { get; set; }
-    public DateTime CriadoEm  { get; set; } = DateTime.UtcNow;
+    public DateTimeOffset CriadoEm  { get; } = DateTimeOffset.Now;
+
+    protected Cliente()
+    {
+        
+    }
 
     public Cliente(string nome, string email, string telefone, Endereco endereco, DateOnly dataNascimento)
     {
@@ -20,6 +25,8 @@ public class Cliente
         Endereco = endereco;
         DataNascimento = dataNascimento;
     }
+
+    
     public void Atualizar(string? nome, string? email, string? telefone, DateOnly? dataNascimento)
     {
         if (!string.IsNullOrWhiteSpace(nome))     Nome     = nome;

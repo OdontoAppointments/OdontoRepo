@@ -12,4 +12,5 @@ public class AppDbContext : DbContext
     }
     
     public DbSet<Cliente> Clientes  { get; set; }
+    public DbSet<Endereco> Enderecos  { get; set; }
 }

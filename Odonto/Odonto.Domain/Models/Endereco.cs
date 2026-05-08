@@ -9,6 +9,11 @@ public class Endereco
     public string CEP { get; set; }
     public string Estado { get; set; }
     public string Cidade { get; set; }
+
+    protected Endereco()
+    {
+        
+    }
     
     public Endereco(
         string rua,

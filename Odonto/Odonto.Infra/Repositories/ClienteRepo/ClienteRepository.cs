@@ -81,10 +81,17 @@ public class ClienteRepository : IClienteRepository
 
     public async Task Remover(int id)
     {
-        var clienteExistente = _context.Clientes
-            .FirstOrDefault(c => c.Id == id);
-        
-        _context.Clientes.Remove(clienteExistente);
-        await _context.SaveChangesAsync();
+        var clienteExistente = await _context.Clientes
+            .Include(c => c.Endereco)
+            .FirstOrDefaultAsync(c => c.Id == id);
+
+        if (clienteExistente is not null)
+        {
+            if (clienteExistente.Endereco is not null)
+                _context.Enderecos.Remove(clienteExistente.Endereco); 
+
+            _context.Clientes.Remove(clienteExistente);
+            await _context.SaveChangesAsync();
+        }
     }
 }

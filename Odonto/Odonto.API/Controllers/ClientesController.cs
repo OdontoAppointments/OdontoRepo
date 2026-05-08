@@ -15,7 +15,6 @@ public class ClientesController : ControllerBase
         _service = service;
     }
 
-    // GET: api/clientes
     [HttpGet]
     public async Task<IActionResult> Listar()
     {
@@ -24,7 +23,6 @@ public class ClientesController : ControllerBase
         return Ok(clientes);
     }
 
-    // GET: api/clientes/1
     [HttpGet("{id:int}")]
     public async Task<IActionResult> ObterPorId(int id)
     {
@@ -33,7 +31,6 @@ public class ClientesController : ControllerBase
         return Ok(cliente);
     }
 
-    // POST: api/clientes
     [HttpPost]
     public async Task<IActionResult> Criar(
         [FromBody] CriarClienteRequest request)
@@ -47,7 +44,6 @@ public class ClientesController : ControllerBase
         );
     }
 
-    // PUT: api/clientes/1
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Atualizar(
         int id,
@@ -59,7 +55,6 @@ public class ClientesController : ControllerBase
         return Ok(clienteAtualizado);
     }
 
-    // DELETE: api/clientes/1
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Remover(int id)
     {
