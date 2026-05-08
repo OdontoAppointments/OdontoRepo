@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Odonto.BL.DependencyInjection;
+using Odonto.Domain.Models;
 using Odonto.Infra.Context.Data.Context;
 using Odonto.Infra.DependencyInjection;
 
@@ -28,6 +29,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseExceptionHandler(appError =>
+{
+    appError.Run(async context =>
+    {
+        context.Response.StatusCode = 500;
+        context.Response.ContentType = "application/json";
+
+        await context.Response.WriteAsJsonAsync(
+            Result<object>.Falha("Erro interno no servidor. Tente novamente mais tarde.")
+        );
+    });
+});
 
 app.UseHttpsRedirection();
 

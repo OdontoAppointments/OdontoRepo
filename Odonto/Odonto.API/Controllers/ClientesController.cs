@@ -18,55 +18,58 @@ public class ClientesController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> Listar()
     {
-        var clientes = await _service.ListarAsync();
+        var result = await _service.ListarAsync();
 
-        return Ok(clientes);
+        return Ok(result);
     }
 
     [HttpGet("{id:int}")]
     public async Task<IActionResult> ObterPorId(int id)
     {
-        var cliente = await _service.ObterPorIdAsync(id);
+        var result = await _service.ObterPorIdAsync(id);
 
-        return Ok(cliente);
+        return result.Sucesso
+            ? Ok(result)
+            : NotFound(result);
     }
-    
+
     [HttpGet("{nome}")]
     public async Task<IActionResult> ObterPorNome(string nome)
     {
-        var cliente = await _service.ObterPorNomeAsync(nome);
-        return Ok(cliente);
+        var result = await _service.ObterPorNomeAsync(nome);
+
+        return result.Sucesso
+            ? Ok(result)
+            : NotFound(result);
     }
 
     [HttpPost]
-    public async Task<IActionResult> Criar(
-        [FromBody] CriarClienteRequest request)
+    public async Task<IActionResult> Criar([FromBody] CriarClienteRequest request)
     {
-        var clienteCriado = await _service.CriarAsync(request);
+        var result = await _service.CriarAsync(request);
 
-        return CreatedAtAction(
-            nameof(ObterPorId),
-            new { id = clienteCriado.Id },
-            clienteCriado
-        );
+        return result.Sucesso
+            ? CreatedAtAction(nameof(ObterPorId), new { id = result.Dados!.Id }, result)
+            : BadRequest(result);
     }
 
     [HttpPut("{id:int}")]
-    public async Task<IActionResult> Atualizar(
-        int id,
-        [FromBody] AtualizarClienteRequest request)
+    public async Task<IActionResult> Atualizar(int id, [FromBody] AtualizarClienteRequest request)
     {
-        var clienteAtualizado =
-            await _service.AtualizarAsync(id, request);
+        var result = await _service.AtualizarAsync(id, request);
 
-        return Ok(clienteAtualizado);
+        return result.Sucesso
+            ? Ok(result)
+            : NotFound(result);
     }
 
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Remover(int id)
     {
-        await _service.RemoverAsync(id);
+        var result = await _service.RemoverAsync(id);
 
-        return NoContent();
+        return result.Sucesso
+            ? Ok(result)
+            : NotFound(result);
     }
 }
